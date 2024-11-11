@@ -1,0 +1,42 @@
+README
+
+Gradient Boosting Regressor for Housing Price Prediction
+
+Overview
+
+This project implements a custom Gradient Boosting Regressor to predict housing prices based on a dataset of property features. By combining multiple decision trees, the model iteratively improves predictions, reducing error at each step. The model's training progress is visualized through loss tracking, allowing for insights into its performance over time.
+
+Features
+
+Custom Gradient Boosting Model: Uses decision trees as base learners, updated at each iteration with new information about prediction errors, improving model accuracy.
+Data Preprocessing: Handles missing values, splits data into training and testing sets, and applies feature scaling to ensure effective model training.
+Loss Visualization: Tracks loss across training epochs, providing a visual way to assess model improvements over time.
+Performance Evaluation: Assesses the model’s predictive accuracy through metrics such as RMSE (Root Mean Squared Error).
+Workflow
+Data Preparation: The dataset is loaded, missing values are addressed, and data is split into training and test sets with 70-30% distribution. Feature scaling ensures uniformity in model training.
+
+Training:
+
+The custom Gradient Boosting Regressor trains sequentially with decision trees, using a configurable learning rate and depth settings.
+At each iteration, the model calculates prediction errors and adjusts predictions, aiming to minimize the loss function.
+Prediction and Evaluation:
+
+Once trained, the model generates predictions on the test data.
+RMSE is calculated to measure the accuracy of these predictions, providing a quantitative evaluation of model performance.
+
+Visualization:
+
+A line plot of loss versus epochs displays model convergence and indicates how well the model is learning with each iteration.
+Tools and Libraries
+Data Processing: pandas, numpy
+Modeling and Evaluation: scikit-learn for decision trees, preprocessing, and error metrics
+Visualization: matplotlib, seaborn
+
+Results:
+
+Prediction Accuracy: The model generates predictions on housing prices, and the computed RMSE provides insights into prediction accuracy.
+Training Insights: Visualized loss over epochs allows for a clear view of how quickly and effectively the model learns.
+Getting Started
+Clone the repository and ensure the required libraries are installed.
+Load the dataset and run the training and evaluation script.
+Review the loss visualization and RMSE output to assess model performance.
